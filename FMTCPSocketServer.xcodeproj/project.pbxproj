@@ -542,6 +542,7 @@
 				84FC265C1E6FAF6700FE86A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84FC265D1E6FAF6700FE86A9 /* Build configuration list for PBXNativeTarget "FMTCPSocketServerTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +551,7 @@
 				84FC265F1E6FAF6700FE86A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84FC26601E6FAF6700FE86A9 /* Build configuration list for PBXNativeTarget "FMTCPSocketServerUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +560,7 @@
 				84FC26621E6FAF6700FE86A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
