@@ -16,6 +16,8 @@
 		84FC26401E6FAF6700FE86A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FC263E1E6FAF6700FE86A9 /* LaunchScreen.storyboard */; };
 		84FC264B1E6FAF6700FE86A9 /* FMTCPSocketServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC264A1E6FAF6700FE86A9 /* FMTCPSocketServerTests.m */; };
 		84FC26561E6FAF6700FE86A9 /* FMTCPSocketServerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC26551E6FAF6700FE86A9 /* FMTCPSocketServerUITests.m */; };
+		84FC26681E6FAF9C00FE86A9 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC26651E6FAF9C00FE86A9 /* AsyncSocket.m */; };
+		84FC26691E6FAF9C00FE86A9 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC26671E6FAF9C00FE86A9 /* AsyncUdpSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		84FC26511E6FAF6700FE86A9 /* FMTCPSocketServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMTCPSocketServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FC26551E6FAF6700FE86A9 /* FMTCPSocketServerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCPSocketServerUITests.m; sourceTree = "<group>"; };
 		84FC26571E6FAF6700FE86A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FC26641E6FAF9C00FE86A9 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		84FC26651E6FAF9C00FE86A9 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		84FC26661E6FAF9C00FE86A9 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		84FC26671E6FAF9C00FE86A9 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		84FC26211E6FAF6700FE86A9 = {
 			isa = PBXGroup;
 			children = (
+				84FC26631E6FAF9C00FE86A9 /* socket */,
 				84FC262C1E6FAF6700FE86A9 /* FMTCPSocketServer */,
 				84FC26491E6FAF6700FE86A9 /* FMTCPSocketServerTests */,
 				84FC26541E6FAF6700FE86A9 /* FMTCPSocketServerUITests */,
@@ -141,6 +148,17 @@
 				84FC26571E6FAF6700FE86A9 /* Info.plist */,
 			);
 			path = FMTCPSocketServerUITests;
+			sourceTree = "<group>";
+		};
+		84FC26631E6FAF9C00FE86A9 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				84FC26641E6FAF9C00FE86A9 /* AsyncSocket.h */,
+				84FC26651E6FAF9C00FE86A9 /* AsyncSocket.m */,
+				84FC26661E6FAF9C00FE86A9 /* AsyncUdpSocket.h */,
+				84FC26671E6FAF9C00FE86A9 /* AsyncUdpSocket.m */,
+			);
+			path = socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,15 +228,18 @@
 				TargetAttributes = {
 					84FC26291E6FAF6700FE86A9 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 538CZ4N2AQ;
 						ProvisioningStyle = Automatic;
 					};
 					84FC26451E6FAF6700FE86A9 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 538CZ4N2AQ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84FC26291E6FAF6700FE86A9;
 					};
 					84FC26501E6FAF6700FE86A9 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 538CZ4N2AQ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84FC26291E6FAF6700FE86A9;
 					};
@@ -277,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FC263B1E6FAF6700FE86A9 /* FMTCPSocketServer.xcdatamodeld in Sources */,
+				84FC26681E6FAF9C00FE86A9 /* AsyncSocket.m in Sources */,
 				84FC26351E6FAF6700FE86A9 /* ViewController.m in Sources */,
+				84FC26691E6FAF9C00FE86A9 /* AsyncUdpSocket.m in Sources */,
 				84FC26321E6FAF6700FE86A9 /* AppDelegate.m in Sources */,
 				84FC262F1E6FAF6700FE86A9 /* main.m in Sources */,
 			);
@@ -428,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSocketServer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSocketServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,7 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSocketServer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSocketServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSocketServerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSocketServerTests;
@@ -462,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSocketServerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSocketServerTests;
@@ -473,6 +502,7 @@
 		84FC26611E6FAF6700FE86A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSocketServerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSocketServerUITests;
@@ -484,6 +514,7 @@
 		84FC26621E6FAF6700FE86A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSocketServerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSocketServerUITests;
